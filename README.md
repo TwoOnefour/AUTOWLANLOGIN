@@ -7,6 +7,8 @@ To prevent complex and repeatedly enter the username and password to auth Wi-Fi,
 It will function when you boot and automatically connect to the correct Wi-Fi, such as WHUT-WLAN, WHUT-WLAN6, etc.
 
 # How to use
+## Select "connect automatically" option while connecting
+![image](https://user-images.githubusercontent.com/77989499/224923133-9a068917-48b9-4ba3-b363-eecdf4c8b521.png)
 
 ## Edit the python file 
 You should edit the username and password before you use it.The script don't send any private message, don't worry.
@@ -41,6 +43,9 @@ Enjoy it :).
 这是一个自动登录武汉理工wifi的小脚本，为了避免反复登录wifi，我写了这个程序
 
 # 该怎么用呢
+
+## 连接wifi的时候使用自动连接
+![image](https://user-images.githubusercontent.com/77989499/224922959-486955ed-ce76-471e-aa76-6b6d9a128877.png)
 
 ## 填入上网账号密码
 首先你得编辑python文件，把你的上网账号和密码填入data，如图
