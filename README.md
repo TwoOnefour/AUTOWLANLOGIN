@@ -11,7 +11,7 @@ It will function when you boot and automatically connect to the correct Wi-Fi, s
 ![image](https://user-images.githubusercontent.com/77989499/224923133-9a068917-48b9-4ba3-b363-eecdf4c8b521.png)
 
 ## Edit the python file 
-You should edit the username and password before you use it.The script don't send any private message, don't worry.
+You should edit the username and password before you use it.The script don't collect any private message, don't worry.
 
 ![image](https://user-images.githubusercontent.com/77989499/224918771-e064b9a2-f772-49e2-843b-bb077b182afb.png)
 
