@@ -51,10 +51,22 @@ Enjoy it :).
 <code>python ./autologinwlan.py</code>.
 
 ## 使用exe自动化
-使用pyinstaller打包生成exe文件，然后把文件放入开机启动项文件夹，这样每次你到了学校wifi的地方，开机自动连接上wifi，程序会自动帮你登录
+使用pyinstaller打包生成exe文件
+
+<code>pyinstaller ./autologinwlan.py -F -w</code>.
+
+然后把文件放入开机启动项文件夹，这样每次你到了学校wifi的地方，开机自动连接上wifi，程序会自动帮你登录
 ![image](https://user-images.githubusercontent.com/77989499/224920640-6f6dde7e-5750-42b4-a3a0-763fd33b0f3c.png)
 
 ![image](https://user-images.githubusercontent.com/77989499/224920678-7ea0e76b-0b6f-4327-b210-139be93ac36c.png)
+
+如果出现报错，多半可能你电脑环境没有pyinstaller，直接下一个就好了
+
+<code>pip install pyinstaller </code>.
+
+如果下载速度太慢，请按ctrl+c取消操作，然后使用清华等镜像源
+
+<code>pip install pyinstaller -i https://pypi.tuna.tsinghua.edu.cn/simple </code>.
 
 这是我的[博客](https://blog.geniusgamestar.xyz "blog")
 
