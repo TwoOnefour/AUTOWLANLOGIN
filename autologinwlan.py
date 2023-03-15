@@ -7,7 +7,10 @@ from urllib import parse
 class AutoLoginWLAN:
     def testConnection(self):
         # time.sleep(60) # 等待网卡就绪
-        res = requests.get("https://www.baidu.com/?cmd=redirect&arubalp=12345",verify=False)
+        try:
+            res = requests.get("https://www.baidu.com/?cmd=redirect&arubalp=12345",verify=False)
+        except Exception as e:
+            return False # 没有链接wifi
         print(res.url)
         if "https://www.baidu.com/?cmd=redirect&arubalp=12345" != res.url:
             # print(res.url.strip("http://172.30.21.100/tpl/whut/login.html?").split("&"))
