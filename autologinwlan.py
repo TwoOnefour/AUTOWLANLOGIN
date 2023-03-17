@@ -46,6 +46,7 @@ class AutoLoginWLAN:
 if __name__ == "__main__":
     loginProcess = AutoLoginWLAN()
     errorCount = 0
+    time.sleep(60) # 如果不需要等待网卡就绪，请注释本条
     while True:
         if not loginProcess.testConnection():
             loginProcess.login()
