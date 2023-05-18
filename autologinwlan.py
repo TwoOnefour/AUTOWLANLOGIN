@@ -11,7 +11,7 @@ class AutoLoginWLAN:
             res = requests.get("https://www.baidu.com/?cmd=redirect&arubalp=12345",verify=False)
         except Exception as e:
             return False # 没有链接wifi
-        print(res.url)
+        # print(res.url)
         if "https://www.baidu.com/?cmd=redirect&arubalp=12345" != res.url:
             # print(res.url.strip("http://172.30.21.100/tpl/whut/login.html?").split("&"))
             self.result = parse.parse_qs(parse.urlparse(res.url).query)
@@ -21,7 +21,7 @@ class AutoLoginWLAN:
             # mac = result["mac"]
             return False
         else:
-            return True
+            return False
     def login(self):
         headers = {
             "Host":"172.30.21.100",
@@ -34,10 +34,11 @@ class AutoLoginWLAN:
             "username":"", # 填入自己的上网账号
             "password":"", # 填入自己的上网密码
             "nasId":14,
-            "userMac":self.result["mac"],
+            "userIpv4": self.result["ip"],  # 可以改成对应ip和mac，指定上网
+            "userMac": self.result["mac"], # 50-C2-E8-77-41-D7 self.result["mac"]
             "captcha":"", # 不想做验证码，因为自己也没遇到过几次
             "captchaId":"",
-            "switchip":self.result["switchip"]
+            "switchip":self.result["switchip"] # 更新以后必须填switch ip，否则登陆不了
         }
         res = requests.post("http://172.30.21.100/api/account/login",data=data)
         data = json.loads(res.text)
@@ -46,7 +47,7 @@ class AutoLoginWLAN:
 if __name__ == "__main__":
     loginProcess = AutoLoginWLAN()
     errorCount = 0
-    time.sleep(60) # 如果不需要等待网卡就绪，请注释本条
+    # time.sleep(60) # 等待网卡就绪
     while True:
         if not loginProcess.testConnection():
             loginProcess.login()
