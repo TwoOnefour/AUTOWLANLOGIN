@@ -57,5 +57,6 @@ if __name__ == "__main__":
             errorCount += 1
         else:
             print("已经联网，退出")
+            break
         if errorCount > 50: # 50次失败自动退出
             break
