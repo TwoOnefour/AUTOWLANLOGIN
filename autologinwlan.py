@@ -2,6 +2,7 @@ import requests
 import time
 import json
 from urllib import parse
+from urllib3 import disable_warnings
 
 # 一个武理自动登录程序
 class AutoLoginWLAN:
@@ -21,7 +22,7 @@ class AutoLoginWLAN:
             # mac = result["mac"]
             return False
         else:
-            return False
+            return True
     def login(self):
         headers = {
             "Host":"172.30.21.100",
@@ -42,9 +43,10 @@ class AutoLoginWLAN:
         }
         res = requests.post("http://172.30.21.100/api/account/login",data=data)
         data = json.loads(res.text)
-        if data["msg"] != "认证成功":
+        if data["code"] != 0:
             print("登陆失败")
 if __name__ == "__main__":
+    disable_warnings()
     loginProcess = AutoLoginWLAN()
     errorCount = 0
     # time.sleep(60) # 等待网卡就绪
@@ -54,6 +56,6 @@ if __name__ == "__main__":
             time.sleep(5) # 五秒重复一次登录
             errorCount += 1
         else:
-            time.sleep(300) # 5分钟检查一次是否登录
+            print("已经联网，退出")
         if errorCount > 50: # 50次失败自动退出
             break
