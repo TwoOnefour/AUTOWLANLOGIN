@@ -73,8 +73,6 @@ Enjoy it :).
 
 <code>pip install pyinstaller -i https://pypi.tuna.tsinghua.edu.cn/simple </code>.
 
-这是我的[博客](https://blog.geniusgamestar.xyz "blog")
-
 如果有什么不正确的地方，请发issue，我会尽量帮助你
 
 Enjoy
