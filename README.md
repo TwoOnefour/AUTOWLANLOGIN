@@ -15,6 +15,11 @@
 然后你可以直接在终端中运行它
 
 <code>python ./autologinwlan.py</code>.
+## 单片机接入
+
+在程序post表单中有个useripv4的项，将此替换为单片机的ip即可
+
+如不想手动拨号，可以将逻辑写入单片机固件，详情见[项目例程ino](https://github.com/Taxzer/AUTOWLANLOGIN)
 
 ## 使用exe自动化
 使用pyinstaller打包生成exe文件
