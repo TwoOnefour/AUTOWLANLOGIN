@@ -33,7 +33,7 @@ By generating an execution file, you can put it in "startup" folder by pressing 
 
 ![image](https://user-images.githubusercontent.com/77989499/224920678-7ea0e76b-0b6f-4327-b210-139be93ac36c.png)
 
-This is my [blog](https://blog.geniusgamestar.xyz "blog") link.
+This is my [blog](https://www.pursuecode.cn "blog") link.
 
 If anything work wrongly, plz open an issue.
 
@@ -41,7 +41,7 @@ Enjoy it :).
 
 # 这是什么
 这是一个自动登录武汉理工wifi的小脚本，为了避免反复登录wifi，我写了这个程序
-
+[EN](https://www.pursuecode.cn "EN")|[中文](https://blog.geniusgamestar.xyz "中文")
 # 该怎么用呢
 
 ## 连接wifi的时候使用自动连接
