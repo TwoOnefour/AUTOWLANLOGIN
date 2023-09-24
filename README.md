@@ -1,7 +1,7 @@
 # 这是什么
 这是一个自动登录武汉理工wifi的小脚本，为了避免反复登录wifi，我写了这个程序
 
-[EN](https://github.com/Taxzer/AUTOWLANLOGIN/blob/main/README_EN.md "EN") | 中文
+[ENG](https://github.com/Taxzer/AUTOWLANLOGIN/blob/main/README_EN.md "ENG") | 中文
 
 # 该怎么用呢
 
