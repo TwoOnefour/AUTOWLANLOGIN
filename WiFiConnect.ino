@@ -57,7 +57,7 @@ void connectWiFi() {
   int httpCode = http1.POST(query_string);
   if (httpCode > 0) {
     if (httpCode == HTTP_CODE_OK) {
-      Serial.println("Portal verifing passed.");
+      Serial.println("Portal verifying passed.");
       digitalWrite(LED, HIGH);
     }
   }
